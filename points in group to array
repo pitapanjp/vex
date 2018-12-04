@@ -1,0 +1,9 @@
+int numpt = npoints(0);
+string group_name = chs("group_name");
+int group_pts[];
+
+for(int i = 0; i < @numpt; i++){
+    if(inpointgroup(0, group_name, i)){
+        push(group_pts, i);
+    }
+}
