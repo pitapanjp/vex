@@ -1,0 +1,22 @@
+// Assumes the pair is 2, and dif is not equal
+
+int numpt = npoints(0);
+
+for(int i = 0; i < numpt; i++){
+    int P1 = i;
+    int num = point(0, "num", i);
+    float difP1 = point(0, "dif", i);
+
+    int count = findattribvalcount(0, "point", "num", num);
+    
+    for(int j = 0; j < count; j++){
+        int P2 = findattribval(0, "point", "num", num, j);
+        if(P1 == P2) continue;
+        float difP2 = point(0, "dif", P2);
+        if(difP1 < difP2) {
+            removepoint(0, P1);
+        } else {
+            removepoint(0, P2);
+        }
+    }
+}
