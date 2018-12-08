@@ -1,5 +1,5 @@
 // Run in DETAIL.
-// Assumes the pair is 2, and dif is not equal
+// Assumes the pair has 2 elemets, delets point only if dif in not equal
 
 int numpt = npoints(0);
 
@@ -14,7 +14,9 @@ for(int i = 0; i < numpt; i++){
         int P2 = findattribval(0, "point", "num", num, j);
         if(P1 == P2) continue;
         float difP2 = point(0, "dif", P2);
-        if(difP1 < difP2) {
+        if(difP1 == difP2){
+            continue;
+        } else if(difP1 < difP2) {
             removepoint(0, P1);
         } else {
             removepoint(0, P2);
