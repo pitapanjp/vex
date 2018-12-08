@@ -1,3 +1,5 @@
+// Run in DETAIL.
+
 int numpt = npoints(0);
 string group_name = chs("group_name");
 int group_pts[];
